@@ -55,7 +55,7 @@ namespace CourseManagement.Services
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<LessonViewModel>> GetAllFilter(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
+        public async Task<IEnumerable<LessonViewModel>> GetAllFilter(string sortOrder, string currentFilter, string searchString, int? courseId, int? pageNumber, int pageSize)
         {
             if (searchString != null)
             {
@@ -67,6 +67,11 @@ namespace CourseManagement.Services
             }
 
             var lessons = from m in _context.Lessons select m;
+
+            if (courseId != null)
+            {
+                lessons = lessons.Where(s => s.CourseId == courseId);
+            }
 
             if (!String.IsNullOrEmpty(searchString))
             {

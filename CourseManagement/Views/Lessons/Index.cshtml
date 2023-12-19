@@ -14,6 +14,10 @@
     <div class="d-flex">
         <input class="form-control" placeholder="Search..." value="@ViewData["CurrentFilter"]" type="text"
             autocomplete="off" name="SearchString" />
+        <select name="courseId" class="form-select" asp-items="ViewBag.CourseId">
+            <option value="">-- Select Course --</option>
+        </select>
+        <button type="submit" class="btn btn-primary">Filter</button>
     </div>
 </form>
 

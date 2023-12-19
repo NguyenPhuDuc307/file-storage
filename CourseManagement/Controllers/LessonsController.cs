@@ -22,10 +22,17 @@ namespace CourseManagement.Controllers
             ViewData["TitleSortParm"] = String.IsNullOrEmpty(sortOrder) || sortOrder.Equals("title") ? "title_desc" : "";
             ViewData["DateCreatedSortParm"] = String.IsNullOrEmpty(sortOrder) || sortOrder.Equals("date_created") ? "date_created_desc" : "date_created";
 
+            var courses = await _coursesService.GetAll();
+            ViewData["CourseId"] = courses.Select(x => new SelectListItem()
+            {
+                Text = x.Title,
+                Value = x.Id.ToString(),
+                Selected = courseId.HasValue && courseId == x.Id
+            });
             ViewData["CurrentFilter"] = searchString;
             ViewData["CurrentSort"] = sortOrder;
 
-            return View(await _lessonsService.GetAllFilter(sortOrder, currentFilter, searchString, pageNumber, PAGESIZE));
+            return View(await _lessonsService.GetAllFilter(sortOrder, currentFilter, searchString, courseId, pageNumber, PAGESIZE));
         }
 
         // GET: Lessons/Details/5
