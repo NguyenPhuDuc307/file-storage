@@ -7,7 +7,7 @@ In this section:
 - Store files using `Upload`, `GetFile`, `Delete` methods
 - Interact with the file on the screen interface
 
-Before coming to this guide, please refer to [Introduction to relationships](https://github.com/NguyenPhuDuc307/introduction-relationship).
+Before coming to this guide, please refer to [Part 8: Introduction to relationships](https://github.com/NguyenPhuDuc307/introduction-relationship).
 
 ## Add a new `Image` field
 
@@ -406,4 +406,4 @@ dotnet watch run
 
 Please refer to the code in this repository for more information.
 
-Next let's [Create a web API with ASP.NET Core](https://github.com/NguyenPhuDuc307/web-api).
+Next let's [Part 10: Create a web API with ASP.NET Core](https://github.com/NguyenPhuDuc307/web-api).
