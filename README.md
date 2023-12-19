@@ -1,4 +1,4 @@
-# File Storage in .NET
+# Part 9: File Storage in .NET
 
 >This tutorial will teach you how to store files using `Upload`, `GetFile`, `Delete` methods. Then interact with the file on the screen interface.
 
