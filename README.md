@@ -247,7 +247,7 @@ namespace CourseManagement.Services
             return await _context.SaveChangesAsync();
         }
 
-        public async Task<IEnumerable<LessonViewModel>> GetAllFilter(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
+        public async Task<PaginatedList<LessonViewModel>> GetAllFilter(string sortOrder, string currentFilter, string searchString, int? pageNumber, int pageSize)
         {
             if (searchString != null)
             {
