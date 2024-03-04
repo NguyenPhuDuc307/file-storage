@@ -312,7 +312,8 @@ namespace CourseManagement.Services
 
 ## Add Image Request and ViewModel in view
 
-Update the form with the following code: 
+Update the form with the following code:
+
 ```html
 <form asp-action="Create" enctype="multipart/form-data">
 ```
