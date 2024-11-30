@@ -354,7 +354,7 @@ Add image request and image preview in view `Create`:
 </script>
 ```
 
-Add image request and image preview in view `Create`:
+Add image request and image preview in view `Update`:
 
 ```html
 <input type="hidden" asp-for="ImagePath" />
